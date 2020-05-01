@@ -1,0 +1,14 @@
+- name: updatepackages 
+  apt: 
+    upgrade: full
+    
+- name: installpython3
+  apt: 
+    name: python3
+    state: latest 
+    
+- name: copyfiles
+  copy:
+    src: embott
+    dest: /opt
+    
